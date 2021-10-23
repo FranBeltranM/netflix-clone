@@ -5,7 +5,7 @@ import MovieRow from "./components/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie";
 import Header from "./components/Header/Header";
 
-export default () => {
+const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeatureData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
@@ -78,3 +78,5 @@ export default () => {
     </div>
   );
 }
+
+export default App;

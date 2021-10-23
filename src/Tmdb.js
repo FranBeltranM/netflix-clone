@@ -15,7 +15,7 @@ const basicFetch = async (endpoint) => {
     return json;
 }
 
-export default {
+const Tmdb = {
     getHomeList: async () => {
         return [{
             slug: 'originals',
@@ -70,9 +70,14 @@ export default {
                 case 'tv':
                     info = await basicFetch(`/tv/${id}?language=es-ES&api_key=${API_KEY}`);
                     break;
+                default:
+                    info = '';
+                    break;
             }
         }
 
         return info;
     }
 }
+
+export default Tmdb;
